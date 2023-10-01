@@ -6,6 +6,10 @@ public class ScrabbleTest {
 
     public static void main(String[] args) {
 
+        /**
+         * // How you create a new instance of Singleton
+         */
+
         Singleton newInstance = Singleton.getInstance();
 
         System.out.println("Instance 1 ID: " + System.identityHashCode(newInstance));
@@ -17,6 +21,13 @@ public class ScrabbleTest {
         System.out.println("Player 1: " + playerOneTiles);
 
         System.out.println(newInstance.getLetterList());
+
+        /**
+         * Try to make another instance of Singleton
+         * This doesn't work because the constructor is private
+         * Singleton instanceTwo = new Singleton();
+         * Try getting a new instance using getInstance
+         */
 
         Singleton instanceTwo = Singleton.getInstance();
 
